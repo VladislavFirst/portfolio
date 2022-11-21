@@ -1,0 +1,88 @@
+.header{
+    height: 95px;
+    display: flex;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    border: 1px solid red;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-link{
+    margin: auto;
+}
+
+.project{
+    background: center;
+    background-size: cover;
+
+}
+
+.project_beginner{
+    height: 430px;
+    width: 636px;
+}
+
+.project_music-album {
+    background-image: url(https://code.s3.yandex.net/web-code/album.png);
+}
+
+.project_design-principles {
+    background-image: url(https://code.s3.yandex.net/web-code/design.png);
+} 
+
+.flex-column {
+    display: flex;
+    width: 636px;
+    height: 557px;
+    justify-content: space-between;
+  }
+  
+  .project_procrastinate {
+    width: 636px;
+    height: 557px;
+  }
+  
+  .project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .project_slider {
+    width: 306px;
+    height: 290px;
+    background-image: url("https://code.s3.yandex.net/web-code/slider.gif")
+  }
+  
+  .project_reactive {
+    width: 306px;
+    height: 290px;
+    background-image: url("https://code.s3.yandex.net/web-code/reactive.gif")
+  }
+  .project_p5 {
+    width: 636px;
+    height: 240px;
+  }
+  
+  .flex-row_frameworks-inner {
+    width: 636px;
+    height: 290px;
+  }
+
+  .flex-column_reversed{
+    flex-direction: column-reverse;
+  }
+
+  .flex-row_reversed{
+    flex-direction: row-reverse;
+  }
