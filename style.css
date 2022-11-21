@@ -1,24 +1,50 @@
+.body{
+    font-family: 'Cormorant Garamond';
+}
+
 .header{
     height: 95px;
     display: flex;
+    max-width: 1330px;
+    min-width: 1280px;
+    margin: auto;   
+}
+
+.header-link{
+    margin: auto;
+    font-size: 28px;
+    text-decoration-line: none;
+    color:#10191E;
+}
+
+.main{
+    max-width: 1330px;
+    min-width: 1280px;
+    margin: auto; 
 }
 
 .menu{
     display: flex;
     justify-content: center;
+    min-height: 75px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1330px;
+    min-width: 1280px;
+    margin: 40px auto;
 }
 
-div{
-    border: 1px solid red;
+.menu-link{
+    font-size: 18px;
+    margin-right: 20px;
+    text-decoration-line: none;
+    color:#10191E;
 }
 
 .flex-row{
     display: flex;
-    justify-content: space-around;
-}
-
-.header-link{
-    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project{
@@ -58,7 +84,7 @@ div{
     object-fit: cover;
   }
   
-  .project_slider {
+.project_slider {
     width: 306px;
     height: 290px;
     background-image: url("https://code.s3.yandex.net/web-code/slider.gif")
@@ -85,4 +111,45 @@ div{
 
   .flex-row_reversed{
     flex-direction: row-reverse;
+    margin: 60px auto;
+  }
+
+  .project_vanilla{
+    width: 306px;
+    height: 290px;
+  }
+
+  .project_how-to-study{
+    order: 3;
+    background-image: url(https://code.s3.yandex.net/web-code/how-to-study.png)
+  }
+
+  .project_across-russia{
+    order: 2;
+    flex-basis: 636px;
+    background-image: url(https://code.s3.yandex.net/web-code/across-russia.png)
+  }
+
+  .project_mesto{
+    order: 1;
+    background-image: url(https://code.s3.yandex.net/web-code/mesto.png)
+  }
+
+  .logo{
+    width: 145px;
+    height: 25px;
+    background-image: url(https://pictures.s3.yandex.net/logo_black.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-self: center;
+  }
+
+  footer{
+    display: flex;
+    height: 95px;
+    justify-content: center;
+    max-width: 1330px;
+    min-width: 1280px;
+    margin: auto;   
   }
