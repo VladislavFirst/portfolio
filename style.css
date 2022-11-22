@@ -1,26 +1,49 @@
-.body{
+.content__title{
+    font-size: 34px;
+    margin: 0 0 40px;
+    text-align: center; 
+}
+
+
+.page{
     font-family: 'Cormorant Garamond';
 }
+
+.centered-block{
+    margin: auto;
+}
+
+.flex-row__space_bottom{
+    margin-bottom: 60px;
+}
+
 
 .header{
     height: 95px;
     display: flex;
     max-width: 1330px;
-    min-width: 1280px;
-    margin: auto;   
+    min-width: 1280px;   
 }
 
-.header-link{
+.header__link{
     margin: auto;
     font-size: 28px;
     text-decoration-line: none;
     color:#10191E;
 }
 
-.main{
-    max-width: 1330px;
-    min-width: 1280px;
-    margin: auto; 
+.header__link::after {
+    content: "!";
+} 
+
+.header__link[lang="ru"]::before {
+    content: 'Привет, меня зовут ';
+}
+.header__link[lang="en"]::before {
+    content: 'Hello, my name is ';
+}
+.header__link[lang="fr"]::before {
+    content: 'Bonjour, je suis ';
 }
 
 .menu{
@@ -31,14 +54,25 @@
     flex-wrap: wrap;
     max-width: 1330px;
     min-width: 1280px;
+}
+
+.page__menu{
     margin: 40px auto;
 }
 
-.menu-link{
+.menu__link{
     font-size: 18px;
     margin-right: 20px;
     text-decoration-line: none;
     color:#10191E;
+}
+
+.menu__link:last-of-type{
+    margin-right: 0;
+}
+
+.menu__link_active{
+    text-decoration: underline;
 }
 
 .flex-row{
@@ -47,62 +81,66 @@
     flex-wrap: wrap;
 }
 
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .project{
     background: center;
     background-size: cover;
-
 }
 
-.project_beginner{
-    height: 430px;
-    width: 636px;
+.project__overlay { 
+    background-color: rgba(0, 0, 100, .8);
+    height: 100%;
+    width: 100%; /* растянули ссылку во весь блок */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* выровняли текст по центру средствами flex */
+    text-decoration: none; /* убрали подчеркивание  */
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    box-sizing: border-box; /* задали внутренний фокус элемента, чтобы контейнер не расширялся */
+    padding: 20px; /* отступ, чтобы текст не касался краёв */
+    opacity: 0;
 }
 
-.project_music-album {
+.project__overlay:hover {
+  opacity: 1;
+}
+.menu__link:last-of-type {
+  margin-right: 0;
+}
+
+.project_name_music-album {
     background-image: url(https://code.s3.yandex.net/web-code/album.png);
 }
 
-.project_design-principles {
+.project_name_design-principles {
     background-image: url(https://code.s3.yandex.net/web-code/design.png);
 } 
 
 .flex-column {
     display: flex;
-    width: 636px;
-    height: 557px;
     justify-content: space-between;
   }
   
-  .project_procrastinate {
-    width: 636px;
-    height: 557px;
-  }
-  
-  .project-video {
+  .project__video {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-.project_slider {
-    width: 306px;
-    height: 290px;
+.project_name_slider {
     background-image: url("https://code.s3.yandex.net/web-code/slider.gif")
   }
   
-  .project_reactive {
-    width: 306px;
-    height: 290px;
+  .project_name_reactive {
     background-image: url("https://code.s3.yandex.net/web-code/reactive.gif")
-  }
-  .project_p5 {
-    width: 636px;
-    height: 240px;
-  }
-  
-  .flex-row_frameworks-inner {
-    width: 636px;
-    height: 290px;
   }
 
   .flex-column_reversed{
@@ -111,31 +149,33 @@
 
   .flex-row_reversed{
     flex-direction: row-reverse;
-    margin: 60px auto;
   }
 
-  .project_vanilla{
-    width: 306px;
-    height: 290px;
-  }
 
-  .project_how-to-study{
+  .project_name_how-to-study{
     order: 3;
     background-image: url(https://code.s3.yandex.net/web-code/how-to-study.png)
   }
 
-  .project_across-russia{
+  .project_name_across-russia{
     order: 2;
-    flex-basis: 636px;
     background-image: url(https://code.s3.yandex.net/web-code/across-russia.png)
   }
 
-  .project_mesto{
+  .project_name_mesto{
     order: 1;
     background-image: url(https://code.s3.yandex.net/web-code/mesto.png)
   }
 
-  .logo{
+  footer{
+    display: flex;
+    height: 95px;
+    justify-content: center;
+    max-width: 1330px;
+    min-width: 1280px;   
+  }
+
+  .footer__logo{
     width: 145px;
     height: 25px;
     background-image: url(https://pictures.s3.yandex.net/logo_black.png);
@@ -145,11 +185,32 @@
     align-self: center;
   }
 
-  footer{
-    display: flex;
-    height: 95px;
-    justify-content: center;
+.content{
     max-width: 1330px;
-    min-width: 1280px;
-    margin: auto;   
-  }
+    min-width: 1280px; 
+}
+
+.project_width_l{
+    width: 636px;
+}
+
+
+.project_width_m{
+    width: 306px;
+}
+
+.project_height_xl{
+    height: 557px;
+}
+
+.project_height_l{
+    height: 430px;
+}
+
+.project_height_m{
+    height: 290px;
+}
+
+.project_height_s{
+    height: 240px;
+}
